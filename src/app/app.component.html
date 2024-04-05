@@ -1,2 +1,19 @@
 <div class="main">hii hello</div>
-<router-outlet></router-outlet>
+<!-- debugger -->
+<!-- <router-outlet></router-outlet> -->
+<input type="checkbox" [(ngModel)]="selectall" (change)="togglecheckbox()">master
+<div *ngFor="let item of checkboxes">
+    <input type="checkbox" [(ngModel)]="item.selected" (change)="checkboxchange()">{{item.title}}
+</div>
+<!-- <div *ngFor="let item of checkboxes">
+    <input type="checkbox" [(ngModel)]="selectall" (change)="togglecheckbox()" >{{item.title}} 
+    <div *ngFor="let subitem of item.submodule.subarray" class="subarray">
+        <input type="checkbox">{{subitem}}
+    </div>   
+</div> -->
+<button (click)="submit()" >
+    Save
+</button>
+<br>
+
+<input type="checkbox" (change)="getCheckbox($event)">click

@@ -1,2 +1,6 @@
 <p>parent works!</p>
-<app-child *ngFor="let prod of productdata.products" [childproduct]="prod"></app-child>
+<input type="text" #templatereferencevariable>
+<button (click)="onbtnclick(templatereferencevariable)">click me</button>
+<app-child #childcomponentrefernc></app-child>
+<!-- <app-child *ngFor="let prod of productdata.products" [childproduct]="prod" #childcomponentrefernce></app-child> -->
+<button (click)="callChildMethod(childcomponentrefernc)">Call Child Method</button>

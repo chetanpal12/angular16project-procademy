@@ -6,6 +6,7 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './parent/child/child.component';
 import { Routes,RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 
 const routes:Routes=[
@@ -22,7 +23,8 @@ const routes:Routes=[
     BrowserModule,
     RouterModule.forRoot(routes),
     HttpClientModule,
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
